@@ -8,7 +8,6 @@ $subscribers = json_decode(file_get_contents('subscribers.json'), true);
 foreach ($subscribers as $browser => $subscribers_list) {
   foreach ($subscribers_list as $subscriber_id) {
     $result = send_push_message($browser, $subscriber_id);
-    print_r($result);
   }
 }
 
