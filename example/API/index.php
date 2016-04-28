@@ -16,7 +16,10 @@ switch($type) {
   // Добавляем нового подписчика
   case 'add':
     $find_browser = false;
-    $urls = ['chrome' => 'https://android.googleapis.com/gcm/send/', 'firefox' => 'https://updates.push.services.mozilla.com/push/'];
+    $urls = [
+      'chrome' => 'https://android.googleapis.com/gcm/send/', 
+      'firefox' => 'https://updates.push.services.mozilla.com/push/'
+    ];
     foreach ($urls as $browser => $url) {
       if(strpos($endpoint, $url) !== false) {
         $find_browser = $browser;

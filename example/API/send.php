@@ -19,8 +19,8 @@ function send_push_message($browser, $subscriber_id) {
     case 'chrome':
       curl_setopt($ch, CURLOPT_URL, 'https://gcm-http.googleapis.com/gcm/send');
       curl_setopt($ch, CURLOPT_POST, true);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: key='.MY_KEY, 'Content-Type: application/json']);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: key='.MY_KEY, 'Content-Type: application/json']);
       curl_setopt($ch, CURLOPT_POSTFIELDS, 
         json_encode([
           'registration_ids' => [$subscriber_id],
@@ -33,9 +33,9 @@ function send_push_message($browser, $subscriber_id) {
 
     case 'firefox':
       curl_setopt($ch, CURLOPT_URL, 'https://updates.push.services.mozilla.com/push/v5/'.$subscriber_id);
-      curl_setopt($ch, CURLOPT_PUT, TRUE);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+      curl_setopt($ch, CURLOPT_PUT, true);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
       curl_setopt($ch, CURLOPT_HTTPHEADER, ['TTL: '.TIME_TO_LIVE]);
       break;
 
