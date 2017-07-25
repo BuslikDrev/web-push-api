@@ -1,5 +1,7 @@
 # Push API - просто и понятно
 
+**Обратите внимание!** Это руководство было написано в апреле 2016 года и часть информации могла устареть. Я постараюсь в ближайшее время актуализировать данные, но когда это произойдет точно - неизвестно.
+
 Практически вся исчерпывающая информация была взята из руководства [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web), документации [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) и [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API). И, конечно, [Stack Overflow](http://stackoverflow.com/).
 
 ## Поддержка и требования
